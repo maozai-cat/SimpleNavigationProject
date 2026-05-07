@@ -1,7 +1,6 @@
 <template>
   <div class="home-page">
     <div class="content">
-      <h1>华师国商<br>AI智媒云</h1>
       <div class="button-group">
         <button class="btn btn-blue" @click="goToDigitalHuman">
           AI数字人
@@ -9,10 +8,10 @@
         <button class="btn btn-red">
           AI美拍
         </button>
-        <button class="btn btn-gray" disabled>
+        <button class="btn btn-pupple">
           AR导览
         </button>
-        <button class="btn btn-gray" disabled>
+        <button class="btn btn-green">
           AI疗愈
         </button>
       </div>
@@ -38,8 +37,7 @@ const goToDigitalHuman = () => {
 .home-page {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 45%),
-              url('/src/assets/IBC_icon.jpg');
+  background: url('/src/assets/IBC_icon.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,20 +54,15 @@ const goToDigitalHuman = () => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
+  padding-top: 150px;
 }
 
-h1 {
-  text-align: center;
-  font-size: 39px;
-  font-weight: bold;
-  line-height: 1.3;
-}
 
 .button-group {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   width: 100%;
 }
 
@@ -83,9 +76,29 @@ h1 {
 
   /* 按钮下方阴影 */
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  /* 鼠标悬停效果 */
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.btn-blue { background-color: #1677ff; }
-.btn-red  { background-color: #ff2020; }
-.btn-gray { background-color: #aaaaaa; }
+/* 👈 新增代码 */
+.btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+}
+
+.btn-blue { background-color: #a9d0fd; }
+.btn-red  { background-color: #fb8b93; }
+.btn-green { background-color: #b2e496; }
+.btn-pupple { background-color: #da99e6; }
+
+/* 蓝色按钮加深 */
+.btn-blue:hover { background-color: #98c4f7; }
+
+/* 红色按钮加深 */
+.btn-red:hover { background-color: #e67680; }
+
+/* 紫色按钮加深 */
+.btn-pupple:hover { background-color: #d290de; }
+
+/* 绿色按钮加深 */
+.btn-green:hover { background-color: #adda93; }
 </style>
