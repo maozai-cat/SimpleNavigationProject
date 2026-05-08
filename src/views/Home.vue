@@ -80,7 +80,6 @@ const goToDigitalHuman = () => {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* 👈 新增代码 */
 .btn:hover:not(:disabled) {
   transform: translateY(-3px);
 }
@@ -90,15 +89,11 @@ const goToDigitalHuman = () => {
 .btn-green { background-color: #b2e496; }
 .btn-pupple { background-color: #da99e6; }
 
-/* 蓝色按钮加深 */
 .btn-blue:hover { background-color: #98c4f7; }
 
-/* 红色按钮加深 */
 .btn-red:hover { background-color: #e67680; }
 
-/* 紫色按钮加深 */
 .btn-pupple:hover { background-color: #d290de; }
 
-/* 绿色按钮加深 */
 .btn-green:hover { background-color: #adda93; }
 </style>
